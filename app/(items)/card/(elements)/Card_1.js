@@ -4,7 +4,7 @@ export default function Card_1() {
   return (
     <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
 	<div className="flex space-x-4">
-		<Image alt="img" width={80} height={80} className="rounded-full object-cover dark:bg-gray-500" src="https://i.ibb.co.com/k6xTr4kw/img.jpg"  />
+		<Image alt="img" width={120} height={80} className="rounded-full object-cover dark:bg-gray-500" src="https://i.ibb.co.com/k6xTr4kw/img.jpg"  />
 		<div className="flex flex-col space-y-1">
 			<a rel="noopener noreferrer" href="#" className="text-sm font-semibold">Leroy Jenkins</a>
 			<span className="text-xs dark:text-gray-600">4 hours ago</span>

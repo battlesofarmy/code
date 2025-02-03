@@ -1,6 +1,10 @@
+import CodeEditor from '@/components/displayFormet/CodeEditor';
 import ItemBox from '../components/ItemBox'
-export default function Home() {
+export default async function Home() {
   const Items = ["Common", "Header", "Footer", "Banner", "Contact", "List", "Box", "Blog", "Button", "Section", "Card", "Carousal", "Input", "Dashboard", "Error", "Faq", "Feature", "Gallery", "Login", "Paigination", "Pricing", "Profile", "Review", "ShopingCart", "Team", "Testimonial", "Weather"];
+
+
+
 
   return (
     <>
@@ -12,7 +16,7 @@ export default function Home() {
             {Items.map((ele) => (
               <ItemBox key={ele} title={ele} />
             ))}
-          </div>
+          </div>  
 
         </div>
       </section>

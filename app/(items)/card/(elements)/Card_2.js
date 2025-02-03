@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-
 export default function Card_2() {
   return (
     <div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">

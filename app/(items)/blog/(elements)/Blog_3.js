@@ -1,9 +1,8 @@
 import Image from "next/image";
 
-
 export default function Blog_3() {
   return (
-    <div className="dark:bg-gray-100 dark:text-gray-800">
+   <div className="dark:bg-gray-100 dark:text-gray-800">
 	<div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-gray-50">
 		<div className="flex items-center justify-between">
 			<span className="text-sm dark:text-gray-600">Jun 1, 2020</span>
@@ -17,12 +16,12 @@ export default function Blog_3() {
 			<a rel="noopener noreferrer" href="#" className="hover:underline dark:text-violet-600">Read more</a>
 			<div>
 				<a rel="noopener noreferrer" href="#" className="flex items-center">
-		   <Image alt="img" width={100} height={100} className="object-cover dark:bg-gray-500" src="https://i.ibb.co.com/k6xTr4kw/img.jpg"  />
-					<span className="hover:underline dark:text-gray-600">Leroy Jenkins</span>
+		          <Image alt="img" width={100} height={100} className="object-cover dark:bg-gray-500" src="https://i.ibb.co.com/k6xTr4kw/img.jpg"  />
+				  <span className="hover:underline dark:text-gray-600">Leroy Jenkins</span>
 				</a>
 			</div>
 		</div>
 	</div>
-</div>
+   </div>
   )
 }

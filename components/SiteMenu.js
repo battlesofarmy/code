@@ -1,5 +1,7 @@
 import LargeMenu_1 from "@/app/(items)/header/item-1/LargeMenu_1";
 import MobileMenu_1 from "@/app/(items)/header/item-1/MobileMenu_1";
+import { FaRocket } from "react-icons/fa6";
+
 import {
     Disclosure,
     DisclosureButton,
@@ -16,7 +18,7 @@ import {
   
   export default function SiteMenu() {
     return (
-      <Disclosure as="nav" className="bg-gray-800">
+      <Disclosure as="nav" className="bg-teal-800">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -38,7 +40,9 @@ import {
             <div className="flex flex-1 items-center justify-center sm:justify-between">
               <div className="flex shrink-0 items-center">
                 <Link href={"/"}>
-                  <h2 className="text-2xl text-gray-200">Muntasir </h2>
+                  <h2 className="text-2xl text-gray-200 flex gap-2 items-center"> 
+                    <FaRocket className="text-orange-600"/> 
+                    Muntasir Ui</h2>
                 </Link>
               </div>
               <div className="hidden sm:ml-6 sm:block">

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 // import SiteMenu from '@/'
 import "./globals.css";
 import SiteMenu from "@/components/SiteMenu";
+import SiteFooter from "@/components/SiteFooter";
 
 
 const geistSans = Geist({
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <SiteMenu/>
         {children}
+        <SiteFooter/>
       </body>
     </html>
   );

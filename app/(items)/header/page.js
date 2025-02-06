@@ -6,6 +6,7 @@ import Code from '@/components/displayFormet/Code'
 import CodeEditor from '@/components/displayFormet/CodeEditor'
 import Header_3 from './(elements)/Header_3'
 import Header_4 from './(elements)/Header_4'
+import Header_5 from './(elements)/Header_5'
 
 export default function Headers() {
 
@@ -133,7 +134,7 @@ export default function MobileMenu_1({ navigation }) {
   );
 }
 `
-
+ 
 
   return (
     <> 
@@ -189,6 +190,16 @@ export default function MobileMenu_1({ navigation }) {
           <Header_4/>
         </Preview>
         <Code id={4}>
+          <CodeEditor code={navbar_1} />
+        </Code>
+      </Formet>
+
+      {/* Header Design 4  */}
+      <Formet>
+        <Preview id={5}>
+          <Header_5/>
+        </Preview>
+        <Code id={5}>
           <CodeEditor code={navbar_1} />
         </Code>
       </Formet>

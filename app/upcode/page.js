@@ -22,7 +22,7 @@ export default function UpCode() {
     const code = form.code.value;
     const product = {id, category, code};
     // console.log(user)
-    axios.post('http://localhost:5000/code', product)
+    axios.post('https://code-back-battlesofarmys-projects.vercel.app/code', product)
     .then((res)=>{
       setClearId('');
       setSuccessMsg("Successfully Code Uploaded")

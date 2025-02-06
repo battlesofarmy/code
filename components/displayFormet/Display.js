@@ -5,8 +5,16 @@ import CodeEditor from "@/components/displayFormet/CodeEditor";
 import axios from "axios";
 
 export default async function Display({category, components}) {
-    const res = await axios.get(`http://localhost:5000/code/${category}`);
-    const data = await res.data;
+	let data = [];
+	try{
+		// const res = await axios.get(`http://localhost:5000/code/${category}`);
+		const res = await axios.get(`https://code-back-battlesofarmys-projects.vercel.app/code/${category}`);
+		data = res.data;
+		console.log(data)
+
+	}catch(err){
+		console.log(err)
+	}
 
   return (
     <>

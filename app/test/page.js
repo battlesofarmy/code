@@ -1,43 +1,29 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
 
-export default function Banner_3() {
+export default function Banner_4() {
   return (
-    <section className="">
-      <div className="container grid md:grid-cols-2 justify-center pt-8 pb-12 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-        <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-          {/* left part  */}
-          <h1 className="text-3xl md:text-5xl font-bold leading-none sm:text-6xl"
-            style={{ lineHeight: "3rem" }}>
-            Ac senectuserat pharetras
-          </h1>
-          <p className="mt-6 mb-8 text-lg sm:mb-12">
-            Dictum aliquam porta in condimentum ac integer
-            <br className="hidden md:inline lg:hidden" />
-            turpis pulvinar, est scelerisque ligula sem
-          </p>
-          <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-            <Link href="#"
-              className="px-8 py-3 font-semibold rounded dark:bg-default-600 dark:text-gray-50"
-            >
-              Suspendisse
-            </Link>
-            <Link href="#" className="px-8 py-3 font-semibold border rounded dark:border-gray-800">
-              Malesuada
-            </Link>
-          </div>
+    <section className="p-6 dark:bg-gray-100 dark:text-gray-800">
+  <div className="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
+    <div className="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-gray-50 bg-gray-200">
+      <span className="block mb-2 dark:text-default-600">Mamba design system</span>
+      <h1 className="text-5xl font-extrabold dark:text-gray-900">Build it with Mamba</h1>
+      <p className="my-8">
+        <span className="font-medium dark:text-gray-900">Modular and versatile.</span>Fugit vero facilis dolor sit neque cupiditate minus esse accusamus cumque at.
+      </p>
+      <form noValidate="" action="" className="self-stretch space-y-3">
+        <div>
+          <label htmlFor="name" className="text-sm sr-only">Your name</label>
+          <input id="name" type="text" placeholder="Your name" className="w-full rounded-md focus:ring focus:dark:ring-default-600 dark:border-gray-300" />
         </div>
-        {/* right part  */}
-        <div className="flex items-center justify-center mt-8 lg:mt-0">
-          <Image
-            width={800}
-            height={600}
-            src="https://mambaui.com/assets/svg/Business_SVG.svg"
-            alt=""
-            className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
-          />
+        <div>
+          <label htmlFor="lastname" className="text-sm sr-only">Email address</label>
+          <input id="lastname" type="text" placeholder="Email address" className="w-full rounded-md focus:ring focus:dark:ring-default-600 dark:border-gray-300" />
         </div>
-      </div>
-    </section>
-  );
+        <button type="button" className="w-full py-2 font-semibold rounded dark:bg-default-600 dark:text-gray-50">Join the waitlist</button>
+      </form>
+    </div>
+    <Image width={600} height={500} src="https://mambaui.com/assets/svg/Business_SVG.svg" alt="" className="object-cover w-full rounded-md xl:col-span-3 dark:bg-gray-500" />
+  </div>
+</section>
+  )
 }

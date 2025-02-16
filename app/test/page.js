@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaFacebook } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const footerLinks = [
   {
@@ -33,7 +34,7 @@ export default function Footer_4() {
         {/* <div className="col-span-8"> */}
           {footerLinks.map((section, idx) => (
             <div key={idx} className="space-y-3 col-span-2 mt-6 md:mt-0">
-              <h3 className="text-[1.1rem] font-medium uppercase dark:text-gray-900 border-l-[3px] pl-2 border-secondary py-0" style={{lineHeight: 'px'}}>{section.title}</h3>
+              <h3 className="text-[1.1rem] font-medium uppercase dark:text-gray-900 border-l-[3px] pl-2 border-secondary" style={{lineHeight: 'px'}}>{section.title}</h3>
               <ul className="space-y-2 text-sm">
                 {section.links.map((link, index) => (
                   <li key={index}>
@@ -46,8 +47,8 @@ export default function Footer_4() {
             </div>
           ))}
 
-          <div className="space-y-3 col-span-3">
-            <h3 className="text-[1.1rem] font-medium uppercase dark:text-gray-900">Connect With Us</h3>
+          <div className="space-y-3 col-span-3 mt-6 md:mt-0">
+            <h3 className="text-[1.1rem] font-medium uppercase dark:text-gray-900 border-l-[3px] pl-2 border-secondary">Connect With Us</h3>
 
 
           <form method="POST" action="#" class="rounded-xl sm:border sm:border-gray-100 sm:bg-white p-1.5 sm:shadow">
@@ -74,6 +75,7 @@ export default function Footer_4() {
             <div className="flex space-x-3 text-xl text-secondary pt-4">
                <a href="#"><FaFacebook/></a>
                <a href="#"><BsTwitterX/></a>
+               <a href="#"><FaGithub/></a>
                <a href="#"><FaInstagram/></a>
             </div>
           </div>

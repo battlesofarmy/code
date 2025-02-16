@@ -11,6 +11,6 @@ const components = {
 }
 
   return (
-	   <Display category={"fahim"} components={components} />
+	   <Display category={"paigination"} components={components} />
   );
 }

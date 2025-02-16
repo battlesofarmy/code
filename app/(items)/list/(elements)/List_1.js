@@ -1,5 +1,5 @@
 
-export default function List1({listItems}) {
+export default function List_1({listItems}) {
   return (
     <>
         <div className="grid grid-cols-2 gap-4">

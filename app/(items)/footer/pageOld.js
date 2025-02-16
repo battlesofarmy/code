@@ -1,6 +1,17 @@
+import Formet from "@/components/displayFormet/Formet";
+import Preview from "@/components/displayFormet/Preview";
+import Code from "@/components/displayFormet/Code";
+import CodeEditor from "@/components/displayFormet/CodeEditor";
+import Footer_1 from "./(elements)/Footer_1";
+import Footer_2 from "./(elements)/Footer_2";
+import Footer_3 from "./(elements)/Footer_3";
+import Footer_4 from "./(elements)/Footer_4";
+
+export default function Footer() {
+const footer_1 = `
 import Link from 'next/link';
 
-export default function Footer_1() {
+function Footer() {
   return (
     <div className="bg-gray-900">
       <div className="max-w-2xl mx-auto text-white py-10">
@@ -34,5 +45,52 @@ export default function Footer_1() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default Footer;
+`;
+
+  return (
+    <>
+      <Formet>
+        <Preview id={1}>
+          <Footer_1/>
+        </Preview>
+        <Code id={1}>
+            <CodeEditor code={footer_1}/>
+        </Code>
+      </Formet>
+
+      <Formet>
+        <Preview id={2}>
+          <Footer_2/>
+        </Preview>
+        <Code id={2}>
+            <CodeEditor code={footer_1}/>
+        </Code>
+      </Formet>
+
+
+      <Formet>
+        <Preview id={3}>
+          <Footer_3/>
+        </Preview>
+        <Code id={3}>
+            <CodeEditor code={footer_1}/>
+        </Code>
+      </Formet>
+
+
+      <Formet>
+        <Preview id={4}>
+          <Footer_4/>
+        </Preview>
+        <Code id={4}>
+            <CodeEditor code={footer_1}/>
+        </Code>
+      </Formet>
+
+    </>
   );
 }

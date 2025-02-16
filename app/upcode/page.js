@@ -3,7 +3,7 @@
 import Code from "@/components/displayFormet/Code";
 import Formet from "@/components/displayFormet/Formet";
 import Preview from "@/components/displayFormet/Preview";
-import axios from "axios";
+import api from "@/utils/axiosConfig";
 import { useState } from "react";
 
 export default function UpCode() {
@@ -22,7 +22,7 @@ export default function UpCode() {
     const code = form.code.value;
     const product = {id, category, code};
     // console.log(user)
-    axios.post('https://code-back-battlesofarmys-projects.vercel.app/code', product)
+    api.post('/code', product)
     .then((res)=>{
       setClearId('');
       setSuccessMsg("Successfully Code Uploaded")
@@ -42,7 +42,7 @@ export default function UpCode() {
     const category = form.category.value;
     const product = {id, category};
     // console.log(user)
-    axios.delete('http://localhost:5000/code', {data: product})
+    api.delete('/code', {data: product})
     .then((res)=>{
       setClearId('');
       setSuccessMsg("Successfully Deleted");
@@ -116,7 +116,7 @@ export default function UpCode() {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Sign in
+                Upload Code
               </button>
             {
               successMsg && <p className="text-green-600 mt-2">{successMsg}</p>
@@ -174,7 +174,7 @@ export default function UpCode() {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Sign in
+                Delete Code
               </button>
             {
               successMsg && <p className="text-green-600 mt-2">{successMsg}</p>

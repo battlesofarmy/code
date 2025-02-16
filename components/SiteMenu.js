@@ -9,6 +9,7 @@ import {
   } from "@headlessui/react";
   import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
   import Link from "next/link";
+import Logo from "./Logo";
   
   const navigation = [
     { name: "Home", href: "/", },
@@ -39,11 +40,7 @@ import {
   
             <div className="flex flex-1 items-center justify-center sm:justify-between">
               <div className="flex shrink-0 items-center">
-                <Link href={"/"}>
-                  <h2 className="text-2xl text-gray-200 flex gap-2 items-center"> 
-                    <FaRocket className="text-orange-600"/> 
-                    Muntasir Ui</h2>
-                </Link>
+                <Logo/>
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">

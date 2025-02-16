@@ -2,13 +2,16 @@ import Formet from "@/components/displayFormet/Formet";
 import Preview from "@/components/displayFormet/Preview";
 import Code from "@/components/displayFormet/Code";
 import CodeEditor from "@/components/displayFormet/CodeEditor";
-import axios from "axios";
+import api from "@/utils/axiosConfig";
 
 export default async function Display({category, components}) {
 	let data = [];
 	try{
-		// const res = await axios.get(`http://localhost:5000/code/${category}`);
-		const res = await axios.get(`https://code-back-battlesofarmys-projects.vercel.app/code/${category}`);
+		const res = await api.get(`/code/${category}`, {
+			headers: {
+				'Cache-Control' : 'no-store'
+			}
+		});
 		data = res.data;
 		console.log(data)
 

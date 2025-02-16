@@ -8,7 +8,7 @@ export default async function Home() {
     <>
       <section className='my-12'>
         <div className="container">
-        <h2 className="text-4xl mb-10 text-center">All About Tailwind Components</h2>
+        <h2 className="text-4xl mb-10 text-center">All About Tailwind & ShadCn</h2>
 
           <div className="grid grid-cols-5 gap-5">
             {Items.map((ele) => (

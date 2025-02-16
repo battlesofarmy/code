@@ -1,6 +1,6 @@
 export default function Banner_1() {
   return (
-    <div className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative md:py-32 py-24 flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <video autoPlay loop muted className="absolute w-full h-full object-cover z-0" >
         <source
@@ -14,15 +14,13 @@ export default function Banner_1() {
 
       {/* Content */}
       <div className="relative z-20 text-center text-white">
-        <h1 className="text-5xl font-bold mb-4">Welcome to Our University</h1>
-        <p className="text-xl mb-8">
+        <h1 className="text-2xl md:text-5xl font-bold mb-4">Welcome to Our University</h1>
+        <p className="md:text-lg mb-8 md:w-3/5 mx-auto">
           Empowering students with knowledge and innovation for a brighter
-          future.
+          future. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, optio?
         </p>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
-          Explore More
-        </button>
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 text-sm md:text-base"> Explore More </button>
       </div>
-    </div>
+    </section>
   )
 }

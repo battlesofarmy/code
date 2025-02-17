@@ -1,5 +1,22 @@
 
-export default function List_1({listItems}) {
+export default function List_1() {
+  const listItems = [
+    "Customized Security Plan",
+    "Receptionist and Concierge services",
+    "Corporate events",
+    "Safety Plans",
+    "Parking lots",
+    "Commercial office buildings",
+    "Special Assignments",
+    "Uniformed and Plain-clothes security",
+    "Mobile and foot patrols",
+    "Video/Security operations center (SOC)",
+    "Access and traffic control",
+    "Retirement/Senior housing facilities",
+    "Warehouses",
+    "Short and Long term assignments….and more",
+  ];
+
   return (
     <>
         <div className="grid grid-cols-2 gap-4">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Box_1() {
   return (
-    <div className="grid grid-cols-4 gap-6">
+    <div className="grid md:grid-cols-4 grid-cols-2 gap-6">
       <div
         style={{ boxShadow: "1px 2px 4px 0px rgba(0,0,0,0.25)" }}
         className="p-4"

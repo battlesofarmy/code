@@ -83,6 +83,7 @@ export default function UpCode() {
               <div className="mt-1">
                 <input
                   required
+                  min={0}
                   value={clearId}
                   placeholder="Code Id"
                   onChange={(e)=> setClearId(e.target.value)}

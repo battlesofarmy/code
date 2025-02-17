@@ -1,49 +1,128 @@
+"use client";
+
+import { FaLocationDot } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa6";
+import { IoMail } from "react-icons/io5";
+
+const icons = {
+	FaPhone: FaPhone,
+	FaLocationDot: FaLocationDot,
+	IoMail: IoMail
+};
+const itmes = [
+	{
+		icon : "FaPhone",
+		data: "0162814914"
+	},{
+		icon : "FaLocationDot",
+		data: "Shariatpur, Dhaka Bangladesh"
+	},{
+		icon : "IoMail",
+		data: "admin@muntasir.vercel.app"
+	}
+];
 
 export default function Contact_1() {
-  return (
-    <section className="py-6 dark:bg-gray-100 dark:text-gray-900">
-	<div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
-		<div className="py-6 md:py-0 md:px-6">
-			<h1 className="text-4xl font-bold">Get in touch</h1>
-			<p className="pt-2 pb-4">Fill in the form to start a conversation</p>
-			<div className="space-y-4">
-				<p className="flex items-center">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
-						<path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
-					</svg>
-					<span>Fake address, 9999 City</span>
-				</p>
-				<p className="flex items-center">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
-						<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-					</svg>
-					<span>123456789</span>
-				</p>
-				<p className="flex items-center">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
-						<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-						<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-					</svg>
-					<span>contact@business.com</span>
-				</p>
-			</div>
-		</div>
-		<form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
-			<label className="block">
-				<span className="mb-1">Full name</span>
-				<input type="text" placeholder="Leroy Jenkins" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-default-600 dark:bg-gray-100" />
-			</label>
-			<label className="block">
-				<span className="mb-1">Email address</span>
-				<input type="email" placeholder="leroy@jenkins.com" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-default-600 dark:bg-gray-100" />
-			</label>
-			<label className="block">
-				<span className="mb-1">Message</span>
-				<textarea rows="3" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-default-600 dark:bg-gray-100"></textarea>
-			</label>
-			<button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-default-600 dark:text-gray-50 focus:dark:ring-default-600 hover:dark:ring-default-600">Submit</button>
-		</form>
-	</div>
-</section>
-  )
+
+const handleFormSubmit =(e)=>{
+	e.preventDefault();
+	const form = e.target;
+	const name = form.name.value;
+	const email = form.email.value;
+	const password = form.password.value;
+	const user = {name, email, password};
+	console.log(user)
 }
+
+	return (
+	<section className="py-12">
+		<div className="container grid md:grid-cols-2 items-center">
+
+			<div className="md:pl-10">
+				<div className="">
+				<h1 className="text-5xl font-medium">Get in touch</h1>
+				<p className="pt-2 pb-6">Fill in the form to start a conversation</p>
+				<div className="space-y-5">
+					{
+						itmes.map(ele=>{
+							const GetIcon = icons[ele.icon];
+							return(
+								<div className="flex gap-3" key={ele.icon}>
+									{GetIcon ? <GetIcon  className="mt-1"/> : null}{" "}
+									<p>{ele.data}</p>
+								</div>
+							)
+						})
+					}
+
+					
+				</div>
+				</div>
+			</div>
+			
+		   {/* Form  */}
+				<div className="shadow-lg flex min-h-full flex-1 flex-col justify-center p-8 sm:p-12 mt-12 md:mt-0">
+					<form onSubmit={handleFormSubmit} className="space-y-6">
+					{/* Name  */}
+					<div>
+						<label htmlFor="name" className="block text-sm/6 font-medium text-gray-900">
+							Your Name
+						</label>
+						<div className="mt-2">
+							<input
+							id="name"
+							name="name"
+							type="text"
+							className="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-lg bg-white"
+							/>
+						</div>
+						</div>
+
+
+						<div>
+						<label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">
+							Email address
+						</label>
+						<div className="mt-2">
+							<input
+							id="email"
+							name="email"
+							type="email"
+							autoComplete="email"
+							className="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-lg bg-white"
+							/>
+						</div>
+						</div>
+
+						<div>
+							<label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">
+								Email address
+							</label>
+							<div className="mt-2">
+								<textarea
+								rows={4}
+								id="email"
+								name="email"
+								type="email"
+								autoComplete="email"
+								className="px-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-lg bg-white"
+								/>
+							</div>
+						</div>
+
+						<div>
+						<button
+							type="submit"
+							className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+						>
+							Send Message
+						</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+	</section>
+	)
+  }
+  

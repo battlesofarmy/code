@@ -1,8 +1,9 @@
 import { Inter, Poppins } from "next/font/google";
-// import SiteMenu from '@/'
-import "./globals.css";
 import SiteMenu from "@/components/SiteMenu";
 import SiteFooter from "@/components/SiteFooter";
+import "./globals.css";
+import Header_5 from "./test/page";
+import Johfa from "./Johfa";
 
 
 // Load fonts
@@ -28,7 +29,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${poppins.variable} antialiased`}>
-        <SiteMenu/>
+        {/* <SiteMenu/> */}
+        {/* <Header_5/> */}
+
+        <Johfa/>
+
+        
         {children}
         <SiteFooter/>
       </body>

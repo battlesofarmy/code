@@ -1,4 +1,7 @@
-  <header className="text-slate-700 relative flex max-w-screen-xl flex-col overflow-hidden px-4 py-4 lg:mx-auto lg:flex-row lg:items-center">
+
+export default function Header_6() {
+  return (
+    <header className="text-slate-700 relative flex max-w-screen-xl flex-col overflow-hidden px-4 py-4 lg:mx-auto lg:flex-row lg:items-center">
     <a href="#" className="flex items-center whitespace-nowrap text-2xl font-black">
       <span className="mr-2 w-8">
         {/* <Image className="" width={500} height={500} src="/images/JOJj79gp_Djhwdp_ZOKLL.png" alt="muntasir" /> */}
@@ -26,3 +29,5 @@
       </div>
     </nav>
   </header>
+  )
+}

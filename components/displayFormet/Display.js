@@ -13,8 +13,6 @@ export default async function Display({category, components}) {
 			}
 		});
 		data = res.data;
-		console.log(data)
-
 	}catch(err){
 		console.log(err)
 	}
@@ -34,9 +32,6 @@ export default async function Display({category, components}) {
 			</Preview>
 			<Code id={i}>
 			   <CodeEditor code={ele.code}/>
-			   {
-				console.log(ele.id)
-			   }
 			</Code>
 		</Formet>
 		)

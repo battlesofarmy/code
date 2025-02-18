@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Header_2() {
+export default function Header_3() {
   return (
     <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
 	<div className="container flex justify-between h-16 mx-auto md:justify-center md:space-x-8">

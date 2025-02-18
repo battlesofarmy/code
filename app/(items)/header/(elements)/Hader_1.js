@@ -6,7 +6,7 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function Header_5() {
+export default function Header_1() {
   const pages = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },

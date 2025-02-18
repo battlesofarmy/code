@@ -25,18 +25,18 @@ export default function Header_1() {
   return (
     <header className="border">
       <div className="container flex shrink-0 items-center h-16">
-        {/* Logo  */}
+        {/* Logo ========================  */}
         <Link href="/" className="mr-6" prefetch={false}>
           <Logo className="h-6 w-6" />
         </Link>
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu ======================== */}
         <nav className="ml-auto hidden lg:flex gap-2">
           {pages?.map((ele) => (
             <Link
               key={ele.name}
               href={ele.href}
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+              className="group text-sm inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
               prefetch={false}
             >
               {ele.name}
@@ -44,7 +44,7 @@ export default function Header_1() {
           ))}
         </nav>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu ======================== */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           {/* Mobile menu Icon  */}
           <SheetTrigger asChild>
